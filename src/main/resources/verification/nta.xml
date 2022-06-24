@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nta PUBLIC "-//Uppaal Team//DTD Flat System 1.1//EN" "http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd">
+
+<nta>
+  <declaration>chan read1,write1;
+chan read2,write2;
+chan read3,write3;
+chan runnable1_start,runnable1_finish;
+chan runnable2_start,runnable2_finish;
+chan runnable3_start,runnable3_finish;
+chan runnable4_start,runnable4_finish;
+chan runnable5_start,runnable5_finish;
+chan runnable6_start,runnable6_finish;
+chan runnable7_start,runnable7_finish;
+chan task1_start,task1_finish;
+chan task2_start,task2_finish;
+chan task3_start,task3_finish;
+</declaration>  <template>    <name>schedule_task1</name>
+    <declaration>clock  x;
+</declaration>    <location id="schedule_task1_schedule_task14-4">      <name>schedule_task14_4</name>
+    </location>
+    <location id="schedule_task1_schedule_task14-1">
+      <name>schedule_task14_1</name>
+    </location>
+    <location id="schedule_task1_schedule_task15-5">
+      <name>schedule_task15_5</name>
+    </location>
+    <location id="schedule_task1_schedule_task15-2">
+      <name>schedule_task15_2</name>
+    </location>
+    <location id="schedule_task1_schedule_task12-2">
+      <name>schedule_task12_2</name>
+    </location>
+    <location id="schedule_task1_schedule_task12-4">
+      <name>schedule_task12_4</name>
+    </location>
+    <location id="schedule_task1_schedule_task12-1">
+      <name>schedule_task12_1</name>
+    </location>
+    <location id="schedule_task1_schedule_task13-1">
+      <name>schedule_task13_1</name>
+    </location>
+    <location id="schedule_task1_schedule_task15-4">
+      <name>schedule_task15_4</name>
+    </location>
+    <location id="schedule_task1_schedule_task14-2">
+      <name>schedule_task14_2</name>
+    </location>
+    <location id="schedule_task1_schedule_task13-5">
+      <name>schedule_task13_5</name>
+    </location>
+    <location id="schedule_task1_schedule_task13-3">
+      <name>schedule_task13_3</name>
+    </location>
+    <location id="schedule_task1_schedule_task11-4">
+      <name>schedule_task11_4</name>
+    </location>
+    <location id="schedule_task1_schedule_task11-2">
+      <name>schedule_task11_2</name>
+    </location>
+    <location id="schedule_task1_schedule_task12-3">
+      <name>schedule_task12_3</name>
+    </location>
+    <location id="schedule_task1_schedule_task15-1">
+      <name>schedule_task15_1</name>
+    </location>
+    <location id="schedule_task1_schedule_task13-4">
+      <name>schedule_task13_4</name>
+    </location>
+    <location id="schedule_task1_schedule_task11-1">
+      <name>schedule_task11_1</name>
+    </location>
+    <location id="schedule_task1_schedule_task14-5">
+      <name>schedule_task14_5</name>
+    </location>
+    <location id="schedule_task1_schedule_task12-5">
+      <name>schedule_task12_5</name>
+    </location>
+    <location id="schedule_task1_schedule_task15-3">
+      <name>schedule_task15_3</name>
+    </location>
+    <location id="schedule_task1_schedule_task14-3">
+      <name>schedule_task14_3</name>
+    </location>
+    <location id="schedule_task1_schedule_task13-2">
+      <name>schedule_task13_2</name>
+    </location>
+    <location id="schedule_task1_schedule_task11-3">
+      <name>schedule_task11_3</name>
+    </location>
+    <location id="schedule_task1_schedule_task11-5">
+      <name>schedule_task11_5</name>
+    </location>
+    <init ref="schedule_task1_schedule_task11-1"/>
+    <transition>
+      <source ref="schedule_task1_schedule_task11-2"/>
+      <target ref="schedule_task1_schedule_task11-3"/>
+      <label kind="synchronisation">runnable1_start!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task12-2"/>
+      <target ref="schedule_task1_schedule_task12-3"/>
+      <label kind="synchronisation">runnable1_start!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task13-2"/>
+      <target ref="schedule_task1_schedule_task13-3"/>
+      <label kind="synchronisation">runnable1_start!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task14-2"/>
+      <target ref="schedule_task1_schedule_task14-3"/>
+      <label kind="synchronisation">runnable1_start!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task15-2"/>
+      <target ref="schedule_task1_schedule_task15-3"/>
+      <label kind="synchronisation">runnable1_start!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task15-1"/>
+      <target ref="schedule_task1_schedule_task11-1"/>
+      <label kind="synchronisation">task3_start!</label>
+      <label kind="guard">x &gt;=60 &amp;&amp; x&lt;=60</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task15-2"/>
+      <target ref="schedule_task1_schedule_task11-2"/>
+      <label kind="synchronisation">task3_start!</label>
+      <label kind="guard">x &gt;=60 &amp;&amp; x&lt;=60</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task15-3"/>
+      <target ref="schedule_task1_schedule_task11-3"/>
+      <label kind="synchronisation">task3_start!</label>
+      <label kind="guard">x &gt;=60 &amp;&amp; x&lt;=60</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task15-4"/>
+      <target ref="schedule_task1_schedule_task11-4"/>
+      <label kind="synchronisation">task3_start!</label>
+      <label kind="guard">x &gt;=60 &amp;&amp; x&lt;=60</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task15-5"/>
+      <target ref="schedule_task1_schedule_task11-5"/>
+      <label kind="synchronisation">task3_start!</label>
+      <label kind="guard">x &gt;=60 &amp;&amp; x&lt;=60</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task11-4"/>
+      <target ref="schedule_task1_schedule_task11-5"/>
+      <label kind="synchronisation">runnable2_start!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task12-4"/>
+      <target ref="schedule_task1_schedule_task12-5"/>
+      <label kind="synchronisation">runnable2_start!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task13-4"/>
+      <target ref="schedule_task1_schedule_task13-5"/>
+      <label kind="synchronisation">runnable2_start!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task14-4"/>
+      <target ref="schedule_task1_schedule_task14-5"/>
+      <label kind="synchronisation">runnable2_start!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task15-4"/>
+      <target ref="schedule_task1_schedule_task15-5"/>
+      <label kind="synchronisation">runnable2_start!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task11-1"/>
+      <target ref="schedule_task1_schedule_task12-2"/>
+      <label kind="guard">x &gt;=20 &amp;&amp; x&lt;=20</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task13-1"/>
+      <target ref="schedule_task1_schedule_task14-2"/>
+      <label kind="guard">x &gt;=40 &amp;&amp; x&lt;=40</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task11-5"/>
+      <target ref="schedule_task1_schedule_task11-1"/>
+      <label kind="synchronisation">runnable2_finish!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task12-5"/>
+      <target ref="schedule_task1_schedule_task12-1"/>
+      <label kind="synchronisation">runnable2_finish!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task13-5"/>
+      <target ref="schedule_task1_schedule_task13-1"/>
+      <label kind="synchronisation">runnable2_finish!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task14-5"/>
+      <target ref="schedule_task1_schedule_task14-1"/>
+      <label kind="synchronisation">runnable2_finish!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task15-5"/>
+      <target ref="schedule_task1_schedule_task15-1"/>
+      <label kind="synchronisation">runnable2_finish!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task11-3"/>
+      <target ref="schedule_task1_schedule_task11-4"/>
+      <label kind="synchronisation">runnable1_finish!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task12-3"/>
+      <target ref="schedule_task1_schedule_task12-4"/>
+      <label kind="synchronisation">runnable1_finish!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task13-3"/>
+      <target ref="schedule_task1_schedule_task13-4"/>
+      <label kind="synchronisation">runnable1_finish!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task14-3"/>
+      <target ref="schedule_task1_schedule_task14-4"/>
+      <label kind="synchronisation">runnable1_finish!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task15-3"/>
+      <target ref="schedule_task1_schedule_task15-4"/>
+      <label kind="synchronisation">runnable1_finish!</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task12-1"/>
+      <target ref="schedule_task1_schedule_task13-1"/>
+      <label kind="synchronisation">task2_start!</label>
+      <label kind="guard">x &gt;=30 &amp;&amp; x&lt;=30</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task12-2"/>
+      <target ref="schedule_task1_schedule_task13-2"/>
+      <label kind="synchronisation">task2_start!</label>
+      <label kind="guard">x &gt;=30 &amp;&amp; x&lt;=30</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task12-3"/>
+      <target ref="schedule_task1_schedule_task13-3"/>
+      <label kind="synchronisation">task2_start!</label>
+      <label kind="guard">x &gt;=30 &amp;&amp; x&lt;=30</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task12-4"/>
+      <target ref="schedule_task1_schedule_task13-4"/>
+      <label kind="synchronisation">task2_start!</label>
+      <label kind="guard">x &gt;=30 &amp;&amp; x&lt;=30</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task12-5"/>
+      <target ref="schedule_task1_schedule_task13-5"/>
+      <label kind="synchronisation">task2_start!</label>
+      <label kind="guard">x &gt;=30 &amp;&amp; x&lt;=30</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task14-1"/>
+      <target ref="schedule_task1_schedule_task15-1"/>
+      <label kind="synchronisation">task2_start!</label>
+      <label kind="guard">x &gt;=60 &amp;&amp; x&lt;=60</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task14-2"/>
+      <target ref="schedule_task1_schedule_task15-2"/>
+      <label kind="synchronisation">task2_start!</label>
+      <label kind="guard">x &gt;=60 &amp;&amp; x&lt;=60</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task14-3"/>
+      <target ref="schedule_task1_schedule_task15-3"/>
+      <label kind="synchronisation">task2_start!</label>
+      <label kind="guard">x &gt;=60 &amp;&amp; x&lt;=60</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task14-4"/>
+      <target ref="schedule_task1_schedule_task15-4"/>
+      <label kind="synchronisation">task2_start!</label>
+      <label kind="guard">x &gt;=60 &amp;&amp; x&lt;=60</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="schedule_task1_schedule_task14-5"/>
+      <target ref="schedule_task1_schedule_task15-5"/>
+      <label kind="synchronisation">task2_start!</label>
+      <label kind="guard">x &gt;=60 &amp;&amp; x&lt;=60</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+  </template>
+  <template>
+    <name>assume</name>
+    <declaration>clock  x;
+</declaration>    <location id="assume_assume3">      <name>assume3</name>
+    </location>
+    <location id="assume_assume99999">
+      <name>assumesink</name>
+    </location>
+    <location id="assume_assume0">
+      <name>assume0</name>
+    </location>
+    <location id="assume_assume2">
+      <name>assume2</name>
+    </location>
+    <init ref="assume_assume3"/>
+    <transition>
+      <source ref="assume_assume0"/>
+      <target ref="assume_assume0"/>
+      <label kind="synchronisation">runnable1_finish?</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume0"/>
+      <target ref="assume_assume0"/>
+      <label kind="synchronisation">runnable1_start?</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume0"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">runnable2_finish?</label>
+      <label kind="guard">x &gt;=0</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume0"/>
+      <target ref="assume_assume2"/>
+      <label kind="synchronisation">runnable2_start?</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume0"/>
+      <target ref="assume_assume0"/>
+      <label kind="synchronisation">task2_start?</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume0"/>
+      <target ref="assume_assume0"/>
+      <label kind="synchronisation">task3_start?</label>
+      <label kind="guard">x &gt;=0</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume2"/>
+      <target ref="assume_assume2"/>
+      <label kind="synchronisation">runnable1_finish?</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume2"/>
+      <target ref="assume_assume2"/>
+      <label kind="synchronisation">runnable1_start?</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume2"/>
+      <target ref="assume_assume2"/>
+      <label kind="synchronisation">runnable2_finish?</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume2"/>
+      <target ref="assume_assume2"/>
+      <label kind="synchronisation">runnable2_start?</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume2"/>
+      <target ref="assume_assume2"/>
+      <label kind="synchronisation">task2_start?</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume2"/>
+      <target ref="assume_assume2"/>
+      <label kind="synchronisation">task3_start?</label>
+      <label kind="guard">x &gt;=0</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">runnable1_finish?</label>
+      <label kind="guard">x &gt;=0 &amp;&amp; x&lt;20</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume3"/>
+      <label kind="synchronisation">runnable1_finish?</label>
+      <label kind="guard">x &gt;=20</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume0"/>
+      <label kind="synchronisation">runnable1_start?</label>
+      <label kind="guard">x &gt;=0 &amp;&amp; x&lt;20</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume3"/>
+      <label kind="synchronisation">runnable1_start?</label>
+      <label kind="guard">x &gt;=20</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">runnable2_finish?</label>
+      <label kind="guard">x &gt;=0 &amp;&amp; x&lt;20</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume3"/>
+      <label kind="synchronisation">runnable2_finish?</label>
+      <label kind="guard">x &gt;=20</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">runnable2_start?</label>
+      <label kind="guard">x &gt;=0 &amp;&amp; x&lt;20</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume3"/>
+      <label kind="synchronisation">runnable2_start?</label>
+      <label kind="guard">x &gt;=20</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume3"/>
+      <label kind="synchronisation">task2_start?</label>
+      <label kind="guard">x &gt;=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">task3_start?</label>
+      <label kind="guard">x &gt;=0 &amp;&amp; x&lt;120</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume3"/>
+      <target ref="assume_assume2"/>
+      <label kind="synchronisation">task3_start?</label>
+      <label kind="guard">x &gt;=120</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume99999"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">runnable1_finish?</label>
+      <label kind="guard">x &gt;=0</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume99999"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">runnable1_start?</label>
+      <label kind="guard">x &gt;=0</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume99999"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">runnable2_finish?</label>
+      <label kind="guard">x &gt;=0</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume99999"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">runnable2_start?</label>
+      <label kind="guard">x &gt;=0</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume99999"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">task2_start?</label>
+      <label kind="guard">x &gt;=0</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+    <transition>
+      <source ref="assume_assume99999"/>
+      <target ref="assume_assume99999"/>
+      <label kind="synchronisation">task3_start?</label>
+      <label kind="guard">x &gt;=0</label>
+      <label kind="assignment">x:=0</label>
+    </transition>
+  </template>
+  <system>system schedule_task1,assume;</system>
+</nta>
